@@ -9,6 +9,7 @@ module.exports = {
     target: 'node',
     module: {
         loaders: [
+            { test: /\.json$/,  loader: 'json' },        
             { test: /\.tsx?$/, loader: 'ts-loader' }
         ]
     },

@@ -1,11 +1,11 @@
-// import personSetup from './Person.ts';
+import setupHTTPServer from './HTTPServer.ts';
 
 export function setup (core:any) {
 	// Init definitoins
 		let definitions:any = {};
 
 	// Setup definitions
-		// personSetup(definitions);
+		setupHTTPServer(definitions, core);
 
 	// Export definitions
 		core.definitions = definitions;

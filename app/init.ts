@@ -6,6 +6,12 @@ let app:any = {};
 
 app.core = core;
 
-console.log(core.libs);
+var appServer = new core.definitions.HTTPServer();
+
+appServer.server.get('/', function (req, res) {
+	res.end(':D');
+});
+
+appServer.server.listen(3000);
 
 export default app;

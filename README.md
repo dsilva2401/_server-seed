@@ -1,4 +1,4 @@
-Ionic Seed
+Server Seed
 ==========
 
 
@@ -22,7 +22,7 @@ gulp serve
 
 ## Server commands
 ```bash
-# Serve server
+# Serve app
 gulp serve
 ```
 
@@ -34,9 +34,12 @@ gulp webpack:build
 
 ## Typings commands
 ```bash
-# Search module
+# Search definition
 gulp typings:search --module mymodule
 
-# Install module
+# Install definition
 gulp typings:install --module mymodule [--global]
+
+# Uninnstall definition
+gulp typings:uninstall --module mymodule [--global]
 ```

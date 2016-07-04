@@ -12,7 +12,8 @@
 			} else {
 				shell.exec(
 					'node_modules/.bin/typings install '+module+' --save'+
-					(global ? ' --global' : ''));
+					(global ? ' --global' : '')
+				);
 			}
 		});
 
@@ -20,6 +21,15 @@
 		gulp.task('typings:search', function(module) {
 			if (!module) return;
 			shell.exec('node_modules/.bin/typings search '+module);
+		});
+
+	// Uninstall definition
+		gulp.task('typings:uninstall', function(module) {
+			if (!module) return;
+			shell.exec(
+				'node_modules/.bin/typings uninstall '+module+' --save'+
+				(global ? ' --global' : '')
+			);
 		});
 
 	// Serve app
